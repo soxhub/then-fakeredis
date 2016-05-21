@@ -1,18 +1,18 @@
-# then-redis [![Travis][build-badge]][build] [![npm package][npm-badge]][npm]
+# then-fakeredis [![Travis][build-badge]][build] [![npm package][npm-badge]][npm]
 
-[build-badge]: https://img.shields.io/travis/mjackson/then-redis.svg?style=flat-square
-[build]: https://travis-ci.org/mjackson/then-redis
+[build-badge]: https://img.shields.io/travis/julusian/then-fakeredis.svg?style=flat-square
+[build]: https://travis-ci.org/julusian/then-fakeredis
 
-[npm-badge]: https://img.shields.io/npm/v/then-redis.svg?style=flat-square
-[npm]: https://www.npmjs.org/package/then-redis
+[npm-badge]: https://img.shields.io/npm/v/then-fakeredis.svg?style=flat-square
+[npm]: https://www.npmjs.org/package/then-fakeredis
 
-[then-redis](https://github.com/mjackson/then-redis) is a fast, promise-based [Redis](http://redis.io) client for [node.js](http://nodejs.org). It's build on top of [node_redis](https://github.com/NodeRedis/node_redis), so it's safe and stable.
+[then-fakeredis](https://github.com/julusian/then-fakeredis) is a fast, promise-based [Redis](http://redis.io) client for [node.js](http://nodejs.org). It's build on top of [fakeredis](https://github.com/guilleiguaran/fakeredis), so it's safe and stable.
 
 ## Installation
 
 Using [npm](https://www.npmjs.com/):
 
-    $ npm install --save redis redis-commands then-redis
+    $ npm install --save redis redis-commands then-fakeredis
 
 > Node version `>=4` is required.
 
@@ -20,10 +20,10 @@ Then, use as you would anything else:
 
 ```js
 // using ES6 modules
-import { createClient } from 'then-redis'
+import { createClient } from 'then-fakeredis'
 
 // using CommonJS modules
-var createClient = require('then-redis').createClient
+var createClient = require('then-fakeredis').createClient
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ var createClient = require('then-redis').createClient
 To create a client:
 
 ```js
-import { createClient } from 'then-redis'
+import { createClient } from 'then-fakeredis'
 
 // Use the default config
 const db = createClient()

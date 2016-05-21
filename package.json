@@ -1,5 +1,5 @@
 {
-  "name": "then-redis",
+  "name": "then-fakeredis",
   "version": "2.0.1",
   "description": "Promise-based Redis client",
   "author": "Michael Jackson",
@@ -36,7 +36,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mjackson/then-redis.git"
+    "url": "https://github.com/julusian/then-fakeredis.git"
   },
   "keywords": [
     "redis",
