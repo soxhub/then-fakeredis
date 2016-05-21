@@ -1,7 +1,7 @@
 import { EventEmitter } from 'events'
 import { parse as parseURL } from 'url'
 import RedisCommands from 'redis-commands'
-import redis from 'redis'
+import redis from 'fakeredis'
 import {
   appendHashToArray,
   parseInfo

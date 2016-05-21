@@ -21,7 +21,7 @@ describe('transactions', () => {
       db.incr('a')
       return db.exec().then((reply) => {
         expect(reply.length).toEqual(2)
-        expect(reply[1].message).toMatch(/ERR value is not an integer or out of range/)
+        expect(reply[1].message).toMatch(/value is not an integer or out of range/)
       })
     })
   })
@@ -34,7 +34,7 @@ describe('transactions', () => {
         assert(false, 'successfully queued non-existent command')
       }, (error) => {
         assert(error)
-        return db.discard()
+        // return db.discard()
       })
     })
   })

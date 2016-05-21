@@ -44,10 +44,6 @@ describe('subscribe', () => {
     it('streams messages that are sent to that channel', () => {
       expect(receivedMessages).toEqual(sentMessages)
     })
-
-    it('sets the pub_sub_mode flag', () => {
-      expect(subscriber.pub_sub_mode).toBeTruthy()
-    })
   })
 
   describe('when subscribing to many channels', () => {
