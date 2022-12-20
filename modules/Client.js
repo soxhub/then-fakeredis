@@ -1,11 +1,12 @@
-import { EventEmitter } from 'events'
-import { parse as parseURL } from 'url'
-import RedisCommands from 'redis-commands'
-import redis from 'fakeredis'
-import {
+const EventEmitter = require('events').EventEmitter;
+const parseURL = require('url').parse;
+const RedisCommands = require('redis-commands');
+const redis = require('fakeredis');
+
+const {
   appendHashToArray,
   parseInfo
-} from './RedisUtils'
+} = require('./RedisUtils');
 
 const ClientProperties = [
   // redis properties, forwarded read-only.
