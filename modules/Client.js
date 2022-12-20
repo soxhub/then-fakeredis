@@ -210,7 +210,7 @@ ClientProperties.forEach((propertyName) => {
   })
 })
 
-RedisCommands.list.forEach((command) => {
+RedisCommands.list.concat(RedisCommands.map(x => x.toUpperCase())).forEach((command) => {
   // Some commands have spaces in them, like CONFIG SET.
   const methodName = command.split(' ')[0]
 
@@ -222,7 +222,7 @@ RedisCommands.list.forEach((command) => {
     enumerable: false,
     writable: true,
     value(...args) {
-      return this.send(command, args)
+      return this.send(command.toLowerCase(), args)
     }
   })
 })
