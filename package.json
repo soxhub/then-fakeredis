@@ -4,7 +4,7 @@
   "description": "Promise-based Redis client",
   "author": "Michael Jackson",
   "license": "MIT",
-  "main": "lib",
+  "main": "modules",
   "files": [
     "lib"
   ],
